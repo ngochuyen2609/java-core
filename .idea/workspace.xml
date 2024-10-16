@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1e4f54-3042-427f-a394-a3c14656fac5" name="Changes" comment="feat(java-json) #4 finish task Gson">
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/jackson/IJacksonConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/jackson/JacksonConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/basic/JacksonConverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3f1e4f54-3042-427f-a394-a3c14656fac5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/config/sql/ hikari.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sql/databases.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sql/setup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/HikariClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/ISQLJavaBridge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/SQLJavaBridge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
@@ -51,7 +52,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -66,10 +73,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.JacksonConverterTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/java-jackson",
+    "git-widget-placeholder": "feature/java-sql",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/bachkhoahanoi/Ky_20241/Project1/java-learn-examples",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -80,11 +87,6 @@
     ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="work.vietdefi.basic.json" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="JacksonConverterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -125,15 +127,6 @@
       <option name="presentableId" value="Default" />
       <updated>1728634391616</updated>
     </task>
-    <task id="LOCAL-00001" summary="feat(java-json) #4 finish task Gson">
-      <option name="closed" value="true" />
-      <created>1728980274365</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1728980274365</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,7 +145,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/java-jackson" />
+                        <option value="feature/java-sql" />
                       </list>
                     </value>
                   </entry>
@@ -163,9 +156,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(java-json) #4 finish task Gson" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(java-json) #4 finish task Gson" />
   </component>
 </project>
