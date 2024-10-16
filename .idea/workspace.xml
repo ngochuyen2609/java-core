@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1e4f54-3042-427f-a394-a3c14656fac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config/sql/ hikari.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sql/databases.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sql/setup.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/HikariClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/ISQLJavaBridge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/SQLJavaBridge.java" afterDir="false" />
+    <list default="true" id="3f1e4f54-3042-427f-a394-a3c14656fac5" name="Changes" comment="feat(java-sql) #9 done task SQLJavaBridge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sql/ hikari.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql/hikari.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/SQLJavaBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/SQLJavaBridge.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +68,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.SqlJavaBridgeTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feature/java-sql",
     "kotlin-language-version-configured": "true",
@@ -87,7 +83,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.SqlJavaBridgeTest">
     <configuration name="JacksonConverterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -112,8 +108,33 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SqlJavaBridgeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;work.vietdefi.basic.SqlJavaBridgeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SqlJavaBridgeTest" />
         <item itemvalue="Gradle.JacksonConverterTest" />
       </list>
     </recent_temporary>
@@ -127,6 +148,15 @@
       <option name="presentableId" value="Default" />
       <updated>1728634391616</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat(java-sql) #9 done task SQLJavaBridge">
+      <option name="closed" value="true" />
+      <created>1729051126102</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729051126102</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,5 +186,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(java-sql) #9 done task SQLJavaBridge" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(java-sql) #9 done task SQLJavaBridge" />
   </component>
 </project>
