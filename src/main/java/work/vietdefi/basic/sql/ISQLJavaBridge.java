@@ -105,4 +105,6 @@ public interface ISQLJavaBridge {
      * </p>
      */
     void close();
+
+    boolean queryExist(String query, Object... params) throws Exception;
 }

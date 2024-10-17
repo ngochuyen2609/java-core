@@ -1,4 +1,4 @@
-package work.vietdefi.basic.jackson;
+package work.vietdefi.basic.json;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;

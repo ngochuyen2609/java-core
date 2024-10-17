@@ -5,4 +5,3 @@
   "dataSource.password": "java@vietdefi",
   "other.config.file": "config/sql/hikari.properties"
 }
-

@@ -5,8 +5,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import work.vietdefi.basic.jackson.IJacksonConverter;
-import work.vietdefi.basic.jackson.JacksonConverter;
+import work.vietdefi.basic.json.IJacksonConverter;
+import work.vietdefi.basic.json.JacksonConverter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
