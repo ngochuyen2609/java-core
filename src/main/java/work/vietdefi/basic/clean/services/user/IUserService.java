@@ -37,6 +37,8 @@ public interface IUserService {
      * @return A JsonObject indicating whether the token is valid and, if valid, any relevant user information or permissions.
      */
     JsonObject authorization(String token);
+
+    JsonObject get(long user_id);
 }
 
 

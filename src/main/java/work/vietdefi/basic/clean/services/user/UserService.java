@@ -3,6 +3,7 @@ package work.vietdefi.basic.clean.services.user;
 
 import com.google.gson.JsonObject;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import work.vietdefi.basic.clean.services.common.SimpleResponse;
 import work.vietdefi.basic.sql.ISQLJavaBridge;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -104,13 +105,17 @@ public class UserService implements IUserService {
 
             BigInteger generatedKey = (BigInteger) bridge.insert(query, username, hashedPassword, token, token_expired);
 
+            System.out.println("generatedKey: " + generatedKey);
             JsonObject response = get(generatedKey.longValue());
+
+            System.out.println("response: " + response);
             if (response == null) {
                 System.out.println("Response is null for generated key: " + generatedKey);
                 return SimpleResponse.createResponse(1);
             }
 
             JsonObject data = response.getAsJsonObject("d");
+            System.out.println("Data: " + data);
             return login(data);
         } catch (Exception e) {
             e.printStackTrace();
@@ -192,6 +197,7 @@ public class UserService implements IUserService {
             if(data == null){
                 return SimpleResponse.createResponse(10);
             }
+
             long token_expired = data.get("token_expired").getAsLong();
             long now = System.currentTimeMillis();
             if(token_expired < now){
@@ -205,7 +211,7 @@ public class UserService implements IUserService {
         }
     }
 
-    //@Override
+    @Override
     public JsonObject get(long user_id) {
         try{
             String query = new StringBuilder("SELECT * FROM ")
@@ -219,7 +225,6 @@ public class UserService implements IUserService {
             json.remove("password");
             return SimpleResponse.createResponse(0, json);
         }catch (Exception e){
-
             return SimpleResponse.createResponse(1);
         }
     }

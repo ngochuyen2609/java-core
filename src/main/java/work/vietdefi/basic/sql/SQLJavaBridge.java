@@ -2,6 +2,8 @@ package work.vietdefi.basic.sql;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import org.apache.commons.lang3.exception.ExceptionUtils;
+
 import java.sql.*;
 
 public class SQLJavaBridge implements ISQLJavaBridge {
@@ -111,13 +113,22 @@ public class SQLJavaBridge implements ISQLJavaBridge {
 
     @Override
     public JsonObject queryOne(String query, Object... params) throws Exception {
+        JsonObject json = null;
         try (Connection connection = sqlClient.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
-            setParameters(statement, params);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                return convertResultSetToJsonObject(resultSet);
+            // Setting parameters in the query
+            for (int i = 0; i < params.length; i++) {
+                statement.setObject(i + 1, params[i]);
             }
+            // Executing query
+            try (ResultSet resultSet = statement.executeQuery()) {
+                json = convertResultSetToJsonObject(resultSet);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new Exception("Error executing query", e);
         }
+        return json;
     }
 
     @Override
@@ -133,26 +144,44 @@ public class SQLJavaBridge implements ISQLJavaBridge {
 
     @Override
     public Object insert(String query, Object... params) throws Exception {
+        Object generatedKey = null;
         try (Connection connection = sqlClient.getConnection();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
-            setParameters(statement, params);
-            statement.executeUpdate();
-            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
-                if (generatedKeys.next()) {
-                    return generatedKeys.getObject(1);
+             PreparedStatement statement = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)) {
+            // Setting parameters in the query
+            for (int i = 0; i < params.length; i++) {
+                statement.setObject(i + 1, params[i]);
+            }
+            // Execute the insert
+            int affectedRows = statement.executeUpdate();
+            // If rows were affected, get the generated keys
+            if (affectedRows > 0) {
+                try (ResultSet generatedKeySet = statement.getGeneratedKeys()) {
+                    while (generatedKeySet.next()) {
+                        generatedKey = generatedKeySet.getObject(1);
+                    }
                 }
             }
+        } catch (SQLException e) {
+            throw e;
         }
-        return null;
+        return generatedKey;
     }
 
     @Override
     public int update(String query, Object... params) throws Exception {
+        int affectedRows;
         try (Connection connection = sqlClient.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
-            setParameters(statement, params);
-            return statement.executeUpdate();
+            // Setting parameters in the query
+            for (int i = 0; i < params.length; i++) {
+                statement.setObject(i + 1, params[i]);
+            }
+            // Execute the insert
+            affectedRows = statement.executeUpdate();
+        } catch (SQLException e) {
+            throw e;
         }
+        return affectedRows;
     }
 
     @Override
