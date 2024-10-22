@@ -38,6 +38,13 @@ public interface IUserService {
      */
     JsonObject authorization(String token);
 
+    /**
+     * Retrieve user information.
+     *
+     * @param user_id The unique identifier of the user.
+     * @return A JsonObject containing the user's data if found;
+     *         otherwise, it may return an error response and an empty object.
+     */
     JsonObject get(long user_id);
 }
 

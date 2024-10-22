@@ -4,6 +4,7 @@ package work.vietdefi.clean.services.user;
 import com.google.gson.JsonObject;
 import org.apache.commons.lang3.RandomStringUtils;
 import work.vietdefi.clean.common.SimpleResponse;
+import work.vietdefi.util.log.DebugLogger;
 import work.vietdefi.util.sql.ISQLJavaBridge;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -106,6 +107,7 @@ public class UserService implements IUserService {
 
             System.out.println("generatedKey: " + generatedKey);
             JsonObject response = get(generatedKey.longValue());
+            System.out.println("response: " + generatedKey.longValue());
 
             System.out.println("response: " + response);
             if (response == null) {
@@ -162,7 +164,9 @@ public class UserService implements IUserService {
                     .append(" WHERE username = ?")
                     .toString();
             JsonObject data = bridge.queryOne(query, username);
-            if(data == null) {
+
+            System.out.println("Data: " + data);
+            if(data == null || data.size() == 0) {
                 return SimpleResponse.createResponse(10);
             }
             String storedPassword = data.get("password").getAsString();
@@ -218,6 +222,8 @@ public class UserService implements IUserService {
                     .append(" WHERE user_id = ?")
                     .toString();
             JsonObject json = bridge.queryOne(query, BigInteger.valueOf(user_id));
+            System.out.println("Data: " +user_id);
+            System.out.println("Data: " + json);
             if(json == null){
                 return SimpleResponse.createResponse(10);
             }

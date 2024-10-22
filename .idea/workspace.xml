@@ -4,36 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1e4f54-3042-427f-a394-a3c14656fac5" name="Changes" comment="feat(java-clean) #12 done task ( update UserService(register,authorization) )">
-      <change afterPath="$PROJECT_DIR$/config/http/vertx.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/log/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/VertxHttpApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/VertxServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/VertxVerticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/test/TestApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/test/TestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/GsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/log/DebugLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/clean/http/TestApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/clean/http/VertxServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3f1e4f54-3042-427f-a394-a3c14656fac5" name="Changes" comment="feat(java-clean) #12 implement handler for POST and GET + unit test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/user/UserApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/user/UserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/SharedServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/clean/user/UserApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/clean/services/common/SimpleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/common/SimpleResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/clean/services/user/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/user/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/clean/services/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/json/GsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/GsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/json/IGsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/IGsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/json/IJacksonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/IJacksonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/json/JacksonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/JacksonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/HikariClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/sql/HikariClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/ISQLJavaBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/sql/ISQLJavaBridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/basic/sql/SQLJavaBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/sql/SQLJavaBridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/work/vietdefi/basic/GsonConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/json/GsonConverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/work/vietdefi/basic/JacksonConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/json/JacksonConverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/work/vietdefi/basic/SqlJavaBridgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/sql/SqlJavaBridgeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/work/vietdefi/basic/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/clean/user/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/VertxHttpApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/http/VertxHttpApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/user/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/user/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/clean/services/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/GsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/json/GsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/sql/SQLJavaBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/vietdefi/util/sql/SQLJavaBridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/work/vietdefi/clean/user/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/work/vietdefi/clean/user/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,41 +75,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.SqlJavaBridgeTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testAuthorization.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testAuthorization_ExpiredToken.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testAuthorization_InvalidToken.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testLoginUser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testLoginUser_IncorrectPassword.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testLoginUser_UsernameDoesNotExist.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testRegisterUser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.testRegisterUser_UsernameExists.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.VertxServerTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/java-clean&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/bachkhoahanoi/Ky_20232/OOP/ThucHanh/JavaFX/demo4&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.SqlJavaBridgeTest.executor": "Run",
+    "Gradle.UserApiTest.executor": "Run",
+    "Gradle.UserApiTest.testRegisterUser.executor": "Run",
+    "Gradle.UserApiTest.testUserGet.executor": "Run",
+    "Gradle.UserApiTest.testUserGetInvalidToken.executor": "Run",
+    "Gradle.UserApiTest.testUserLoginInvalidPassword.executor": "Run",
+    "Gradle.UserApiTest.testUserLoginInvalidUsername.executor": "Run",
+    "Gradle.UserServiceTest.executor": "Run",
+    "Gradle.UserServiceTest.testAuthorization.executor": "Run",
+    "Gradle.UserServiceTest.testAuthorization_ExpiredToken.executor": "Run",
+    "Gradle.UserServiceTest.testAuthorization_InvalidToken.executor": "Run",
+    "Gradle.UserServiceTest.testLoginUser.executor": "Run",
+    "Gradle.UserServiceTest.testLoginUser_IncorrectPassword.executor": "Run",
+    "Gradle.UserServiceTest.testLoginUser_UsernameDoesNotExist.executor": "Run",
+    "Gradle.UserServiceTest.testRegisterUser.executor": "Run",
+    "Gradle.UserServiceTest.testRegisterUser_UsernameExists.executor": "Run",
+    "Gradle.VertxServerTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/java-clean",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/bachkhoahanoi/Ky_20241/Project1/java-learn-examples",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.externalResources"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;C:\\Users\\ADMIN\\.gradle&quot;
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\ADMIN\\.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\bachkhoahanoi\Ky_20241\Project1\java-core\config\log" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.VertxServerTest">
-    <configuration name="UserServiceTest.testAuthorization_ExpiredToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserApiTest.testUserGetInvalidToken">
+    <configuration name="UserApiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -139,7 +128,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;work.vietdefi.basic.UserServiceTest.testAuthorization_ExpiredToken&quot;" />
+            <option value="&quot;work.vietdefi.clean.user.UserApiTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,7 +139,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.testLoginUser_UsernameDoesNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserApiTest.testUserGet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,7 +152,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;work.vietdefi.basic.UserServiceTest.testLoginUser_UsernameDoesNotExist&quot;" />
+            <option value="&quot;work.vietdefi.clean.user.UserApiTest.testUserGet&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -174,7 +163,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.testRegisterUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserApiTest.testUserGetInvalidToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,7 +176,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;work.vietdefi.basic.UserServiceTest.testRegisterUser&quot;" />
+            <option value="&quot;work.vietdefi.clean.user.UserApiTest.testUserGetInvalidToken&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -198,7 +187,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.testRegisterUser_UsernameExists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserApiTest.testUserLoginInvalidPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -211,7 +200,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;work.vietdefi.basic.UserServiceTest.testRegisterUser_UsernameExists&quot;" />
+            <option value="&quot;work.vietdefi.clean.user.UserApiTest.testUserLoginInvalidPassword&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -222,7 +211,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="VertxServerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserApiTest.testUserLoginInvalidUsername" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -235,7 +224,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;work.vietdefi.basic.clean.http.VertxServerTest&quot;" />
+            <option value="&quot;work.vietdefi.clean.user.UserApiTest.testUserLoginInvalidUsername&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -248,11 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.VertxServerTest" />
-        <item itemvalue="Gradle.UserServiceTest.testAuthorization_ExpiredToken" />
-        <item itemvalue="Gradle.UserServiceTest.testRegisterUser" />
-        <item itemvalue="Gradle.UserServiceTest.testRegisterUser_UsernameExists" />
-        <item itemvalue="Gradle.UserServiceTest.testLoginUser_UsernameDoesNotExist" />
+        <item itemvalue="Gradle.UserApiTest.testUserGetInvalidToken" />
+        <item itemvalue="Gradle.UserApiTest" />
+        <item itemvalue="Gradle.UserApiTest.testUserLoginInvalidPassword" />
+        <item itemvalue="Gradle.UserApiTest.testUserLoginInvalidUsername" />
+        <item itemvalue="Gradle.UserApiTest.testUserGet" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +278,31 @@
       <option name="project" value="LOCAL" />
       <updated>1729224796167</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(java-clean) #12 change the structure document">
+      <option name="closed" value="true" />
+      <created>1729570933931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729570933931</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(java-clean) #12 implement Vertx http server + unit test">
+      <option name="closed" value="true" />
+      <created>1729571000108</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729571000108</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(java-clean) #12 implement handler for POST and GET + unit test">
+      <option name="closed" value="true" />
+      <created>1729571019118</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729571019118</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,6 +337,9 @@
     <MESSAGE value="feat(java-sql) #9 done task SQLJavaBridge" />
     <MESSAGE value="feat(java-clean) #12 done task" />
     <MESSAGE value="feat(java-clean) #12 done task ( update UserService(register,authorization) )" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(java-clean) #12 done task ( update UserService(register,authorization) )" />
+    <MESSAGE value="feat(java-clean) #12 change the structure document" />
+    <MESSAGE value="feat(java-clean) #12 implement Vertx http server + unit test" />
+    <MESSAGE value="feat(java-clean) #12 implement handler for POST and GET + unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(java-clean) #12 implement handler for POST and GET + unit test" />
   </component>
 </project>

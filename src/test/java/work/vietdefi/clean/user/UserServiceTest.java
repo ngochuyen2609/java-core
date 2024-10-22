@@ -180,6 +180,8 @@ public class UserServiceTest {
     void testAuthorization() {
         String username = "testUser";
         String password = "password123";
+        userService.register(username, password);
+
         JsonObject loginResponse = userService.login(username, password);
         String token = loginResponse.getAsJsonObject("d").get("token").getAsString();
 

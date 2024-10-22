@@ -121,7 +121,7 @@ public class SQLJavaBridge implements ISQLJavaBridge {
             }
             // Executing query
             try (ResultSet resultSet = statement.executeQuery()) {
-                json = convertResultSetToJsonObject(resultSet);
+                    json = convertResultSetToJsonObject(resultSet);
             }
         } catch (SQLException e) {
             e.printStackTrace();
