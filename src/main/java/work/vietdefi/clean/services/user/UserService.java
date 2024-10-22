@@ -1,11 +1,10 @@
-package work.vietdefi.basic.clean.services.user;
+package work.vietdefi.clean.services.user;
 
 
 import com.google.gson.JsonObject;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.exception.ExceptionUtils;
-import work.vietdefi.basic.clean.services.common.SimpleResponse;
-import work.vietdefi.basic.sql.ISQLJavaBridge;
+import work.vietdefi.clean.common.SimpleResponse;
+import work.vietdefi.util.sql.ISQLJavaBridge;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.math.BigInteger;

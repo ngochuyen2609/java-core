@@ -1,11 +1,11 @@
-package work.vietdefi.basic;
+package work.vietdefi.sql;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import work.vietdefi.basic.sql.HikariClient;
-import work.vietdefi.basic.sql.SQLJavaBridge;
+import work.vietdefi.util.sql.HikariClient;
+import work.vietdefi.util.sql.SQLJavaBridge;
 
 import static org.junit.jupiter.api.Assertions.*;
 

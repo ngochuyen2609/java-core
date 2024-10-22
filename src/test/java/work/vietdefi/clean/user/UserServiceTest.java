@@ -1,12 +1,12 @@
-package work.vietdefi.basic;
+package work.vietdefi.clean.user;
 
 import com.google.gson.JsonObject;
 import org.junit.jupiter.api.*;
-import work.vietdefi.basic.clean.services.common.SimpleResponse;
-import work.vietdefi.basic.clean.services.user.UserService;
-import work.vietdefi.basic.sql.HikariClient;
-import work.vietdefi.basic.sql.ISQLJavaBridge;
-import work.vietdefi.basic.sql.SQLJavaBridge;
+import work.vietdefi.clean.common.SimpleResponse;
+import work.vietdefi.clean.services.user.UserService;
+import work.vietdefi.util.sql.HikariClient;
+import work.vietdefi.util.sql.ISQLJavaBridge;
+import work.vietdefi.util.sql.SQLJavaBridge;
 
 import java.io.IOException;
 

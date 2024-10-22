@@ -1,9 +1,9 @@
-package work.vietdefi.basic.sql;
+package work.vietdefi.util.sql;
 
 import com.google.gson.JsonObject;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import work.vietdefi.basic.json.GsonConverter;
+import work.vietdefi.util.json.GsonConverter;
 
 
 import java.io.FileInputStream;

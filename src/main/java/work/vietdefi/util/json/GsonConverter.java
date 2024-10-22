@@ -1,4 +1,4 @@
-package work.vietdefi.basic.json;
+package work.vietdefi.util.json;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;

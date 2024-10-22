@@ -1,10 +1,10 @@
-package work.vietdefi.basic;
+package work.vietdefi.json;
 
 import com.google.gson.JsonElement;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import work.vietdefi.basic.json.GsonConverter;
-import work.vietdefi.basic.json.IGsonConverter;
+import work.vietdefi.util.json.GsonConverter;
+import work.vietdefi.util.json.IGsonConverter;
 
 
 import static org.junit.jupiter.api.Assertions.*;

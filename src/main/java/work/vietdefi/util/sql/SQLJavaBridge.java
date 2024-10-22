@@ -1,8 +1,7 @@
-package work.vietdefi.basic.sql;
+package work.vietdefi.util.sql;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import java.sql.*;
 

@@ -1,4 +1,4 @@
-package work.vietdefi.basic.clean.services.user;
+package work.vietdefi.clean.services.user;
 
 import com.google.gson.JsonObject;
 

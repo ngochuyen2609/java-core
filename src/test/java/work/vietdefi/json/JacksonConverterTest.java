@@ -1,12 +1,12 @@
-package work.vietdefi.basic;
+package work.vietdefi.json;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import work.vietdefi.basic.json.IJacksonConverter;
-import work.vietdefi.basic.json.JacksonConverter;
+import work.vietdefi.util.json.IJacksonConverter;
+import work.vietdefi.util.json.JacksonConverter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
